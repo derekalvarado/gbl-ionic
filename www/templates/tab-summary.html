@@ -1,0 +1,36 @@
+<ion-view view-title="Summary" class="">
+  <ion-content class="padding homebg" has-bouncing="false">
+
+
+    <!--picker is going to require a lot more work-->
+    <!--<div class="item item-input item-select">
+      <div class="input-label">Range:</div>
+      <select novalidate name="Range" id="" ng-model="vm.range" ng-change="vm.pickerChange()">
+        <option value="today" selected>Today</option>
+        <option value="this week">This Week</option>
+      </select>
+
+    </div>-->
+
+    <!--<gbl-chart range="vm.rangePicker"></gbl-chart>-->
+
+    <div class="card">
+      <div class="item item-text-wrap">
+        <h2>Totals for {{vm.range}}:</h2>
+      </div>
+    </div>
+
+    <ul class="list">
+      <li class="item" ng-repeat="(key, val) in vm.viewModel">
+        <h3>{{val.name}}</h3>
+        <i class="ion-ios-nutrition serving-summary-fill" ng-repeat="i in vm.getNumber(val.servings) track by $index"></i>
+        <i class="ion-ios-nutrition-outline serving-summary" ng-repeat="j in vm.getNumber(val.goalServings - val.servings) track by $index"></i>
+      </li>
+
+    </ul>
+
+
+
+
+  </ion-content>
+</ion-view>

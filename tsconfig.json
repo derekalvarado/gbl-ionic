@@ -1,0 +1,22 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es5",
+    "outFile": "www/js/app.js",
+    "sourceMap": true,
+
+    "watch": true
+
+  },
+
+  "files": [
+
+    "typings/index.d.ts",
+  //   "www/src/app.ts",
+    "src/CategoryService.ts",
+    "src/*.ts"
+
+  //   "src/RepoService.ts",
+  //   "src/LocalStorageService.ts"
+  ]
+}

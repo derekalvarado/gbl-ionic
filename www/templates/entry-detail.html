@@ -1,0 +1,43 @@
+<ion-view view-title="Add new: {{vm.entryName}}" class="homebg">
+
+  <ion-content  has-bouncing="false">
+
+    <div class="imgfull">
+      <img ng-src="img/{{vm.categoryInfo.photo}}" alt="">
+    </div>
+    <div class="card">
+      <div class="item item-text-wrap">
+        <h3>What did you have?</h3>
+        <p>You can skip the search if you wish, just click save below.</p>
+      </div>
+    </div>
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="vm.searchItem"/>
+      </label>
+    </div>
+
+
+    <div class="card">
+      <div class="row">
+        <div class="col col-50">
+          <h3>
+            Servings:
+          </h3>
+          <button class="button icon ion-ios-minus-empty" ng-click="vm.decrease()"></button>
+          <button style="float:right;" class="button icon ion-ios-plus-empty" ng-click="vm.increase()"></button>
+
+        </div>
+        <div class="col col-50 col-center">
+          <h1 class="serving-number">{{vm.servings}}</h1>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="button button-full button-balanced" ng-disabled="vm.servings < 1" ng-click="vm.save(vm.searchItem, vm.categoryId, vm.servings)">Save</button>
+    <button class="button button-full button-stable" ui-sref="tab.home">Cancel</button>
+  </ion-content>
+</ion-view>

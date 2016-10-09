@@ -1,0 +1,40 @@
+{
+    "20160101": {
+        "leafy-greens": [
+            {
+                "time": "11:30:00 AM",
+                "goodBadCategory": "positive",
+                "foodDetail": "Kale salad",
+                "servings": 3
+            }
+        ],
+        "beans-legumes": [
+            {
+                "time": "12:30:00 AM",
+                "goodBadCategory": "good",
+                "foodDetail": "Side of black beans",
+                "servings": 3
+            }
+        ]
+    },
+    "20160110": {
+        "leafy-greens": [
+            {
+                "time": "11:30:00 AM",
+                "generalCategory": "positive",
+                "foodCategory": "leafy greens",
+                "foodDetail": null,
+                "servings": 3
+            }
+        ],
+        "beans-legumes": [
+            {
+                "time": "11:30:00 AM",
+                "generalCategory": "negative",
+                "foodCategory": "alcohol",
+                "foodDetail": null,
+                "servings": 3
+            }
+        ]
+    }
+}

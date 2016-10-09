@@ -1,0 +1,52 @@
+/* Empty. Add your own CSS if you like */
+img {
+    width: 100%;
+}
+.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.bottom-padding {
+    margin-bottom: 10px;
+}
+.homebg  {
+    background: url('../img/stock-vector-assorted-vegetables-seamless-pattern-grunge-background-237752602.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.imgfull {
+    width: 100vw;
+}
+.no-padding {
+    padding: 0 !important;
+}
+
+.serving-number {
+    font-size: 5em;
+    text-align: center;
+}
+
+.serving-summary {
+    font-size: 3em;
+    text-align: center;
+}
+
+.serving-summary-fill {
+    font-size: 3em;
+    text-align: center;
+    color: darkorange;
+}
+
+/*Change position and size of item avatar*/
+.item-avatar > img:first-child, .item-avatar .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image {
+    position: absolute;
+    top: 19px;
+    left: 10px;
+    max-width: 55px;
+    max-height: 55px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}

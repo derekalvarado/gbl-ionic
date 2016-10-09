@@ -1,0 +1,34 @@
+<ion-view view-title="Green Body Love: Journal" class="homebg">
+
+
+  <ion-content padding="false" has-bouncing="false">
+
+    <div class="imgfull">
+      <img src="img/food_journal.jpg" alt="">
+    </div>
+
+    <div class="row padding">
+      <div class="col">
+        <div class="card">
+          <div class="item item-text-wrap">
+            <h3>The Green Body Love Journal!</h3>
+            <p>Tap a category below to add an entry.</p>
+          </div>
+        </div>
+
+
+        <ion-list>
+
+          <ion-item class="item bottom-padding item-avatar item-icon-right" ng-repeat="(category, item) in vm.categories" href="#/tab/home/{{category}}">
+            <img ng-src="img/{{item.photo}}">
+            <h2>{{item.name}}</h2>
+            <p>{{item.description}}</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+
+        </ion-list>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
