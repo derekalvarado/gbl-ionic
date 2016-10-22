@@ -56,13 +56,17 @@ var app;
             this.categories = {
                 "leafy-greens": {
                     photo: "lettuce.jpg",
+                    icon: "kale_color.svg",
+                    iconOutline: "kale_outline.svg",
                     goodBadCategory: "good",
                     name: "Leafy Greens",
-                    description: "Romaine, iceberg lettuce, kale, etc.",
+                    description: "Romaine, spinach, kale, etc.",
                     goalServings: 3
                 },
                 "beans-legumes": {
                     photo: "beans-legumes.jpg",
+                    icon: "beans_color.svg",
+                    iconOutline: "beans_outline.svg",
                     goodBadCategory: "good",
                     name: "Beans and Legumes",
                     description: "Black beans, kidney beans, lentils, etc.",
@@ -70,6 +74,8 @@ var app;
                 },
                 "berries-cherries": {
                     photo: "berries.jpg",
+                    icon: "berry_color.svg",
+                    iconOutline: "berry_outline.svg",
                     goodBadCategory: "good",
                     name: "Berries and Cherries",
                     description: "Blackberries, blueberries, cherries, etc.",
@@ -77,6 +83,8 @@ var app;
                 },
                 "fruits": {
                     photo: "fruits.jpg",
+                    icon: "apple_color.svg",
+                    iconOutline: "apple_outline.svg",
                     goodBadCategory: "good",
                     name: "Fruit",
                     description: "Bananas, mangos, apples, pineapple, etc.",
@@ -84,6 +92,8 @@ var app;
                 },
                 "vegetables": {
                     photo: "vegetables.jpg",
+                    icon: "carrots_color.svg",
+                    iconOutline: "carrots_outline.svg",
                     goodBadCategory: "good",
                     name: "Vegetables",
                     description: "Tomatoes, zucchini, carrots, etc.",
@@ -91,13 +101,17 @@ var app;
                 },
                 "nuts-seeds": {
                     photo: "nuts-seeds.jpg",
+                    icon: "nuts_color.svg",
+                    iconOutline: "nuts_outline.svg",
                     goodBadCategory: "good",
                     name: "Nuts and Seeds",
                     description: "Unsalted walnuts, cashews, pumpkin seeds, etc.",
                     goalServings: 3
                 },
                 "whole-grains": {
-                    photo: "whole-grains.jpg",
+                    photo: "whole_grains.jpg",
+                    icon: "wheat_color.svg",
+                    iconOutline: "wheat_outline.svg",
                     goodBadCategory: "good",
                     name: "Whole Grains",
                     description: "Whole wheat bread, oatmeal, quinoa, etc.",
@@ -473,13 +487,15 @@ var app;
         };
         SummaryCtrl.prototype.getNumber = function (num) {
             //debugger;
-            return new Array(num);
+            if (num >= 0) {
+                return new Array(num);
+            }
+            return new Array(0);
         };
+        //Method that updates the viewModel
+        //Named because I had a dropdown in mind for the tab-summary page
         SummaryCtrl.prototype.pickerChange = function (range) {
             this.results = this.DbService.getEntriesForToday();
-            // if (Object.keys(this.results).length === 0 && this.results.constructor === Object) {
-            //     return;
-            // }
             var tally = this.tallyServings(this.results);
             //Get all categories so as to build a complete view model, including 
             //categories that we dont' have an entry for            
@@ -487,11 +503,15 @@ var app;
             //Assemble the view model            
             for (var categoryId in categories) {
                 var _name = categories[categoryId].name;
+                var _icon = categories[categoryId].icon;
+                var _iconOutline = categories[categoryId].iconOutline;
                 var _servings = tally[categoryId] ? tally[categoryId].servings : 0;
                 var _goalServings = categories[categoryId].goalServings;
                 var summary = {
                     name: _name,
                     servings: _servings,
+                    icon: _icon,
+                    iconOutline: _iconOutline,
                     goalServings: _goalServings
                 };
                 this.viewModel[categoryId] = summary;

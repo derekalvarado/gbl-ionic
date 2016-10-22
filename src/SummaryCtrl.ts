@@ -9,6 +9,8 @@ namespace app {
     interface ISummaryViewModel {
         [index: string]: {
             name?: string,
+            icon: string,
+            iconOutline: string,
             servings?: number,
             goalServings?: number,
         }
@@ -57,7 +59,7 @@ namespace app {
 
         public tallyServings(categoryEntries: IJournalEntry): ITally {
 
-            var tally: ITally = {};
+            let tally: ITally = {};
 
             for (let categoryId in categoryEntries) {
                 tally[categoryId] = {}
@@ -75,16 +77,18 @@ namespace app {
 
         public getNumber(num: number): Array<any> {
             //debugger;
-            return new Array(num);
+            if (num >= 0) {
+                return new Array(num);
+            }
+            return new Array(0);
+            
         }        
 
+        //Method that updates the viewModel
+        //Named because I had a dropdown in mind for the tab-summary page
         public pickerChange(range: string): void {
 
             this.results = this.DbService.getEntriesForToday();
-
-            // if (Object.keys(this.results).length === 0 && this.results.constructor === Object) {
-            //     return;
-            // }
 
             let tally: ITally = this.tallyServings(this.results);
 
@@ -95,12 +99,16 @@ namespace app {
             //Assemble the view model            
             for (let categoryId in categories) {
                 let _name = categories[categoryId].name;
+                let _icon = categories[categoryId].icon;
+                let _iconOutline = categories[categoryId].iconOutline;
                 let _servings = tally[categoryId] ? tally[categoryId].servings : 0;
                 let _goalServings = categories[categoryId].goalServings;
                 let summary = 
                     {
                         name: _name,
                         servings: _servings,
+                        icon: _icon,
+                        iconOutline: _iconOutline,
                         goalServings: _goalServings
                     }
                 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="375px" height="333px" viewBox="0 0 375 333" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #74D0DD;">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="8.94939848" width="208" height="281.906052" rx="5"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="208" height="281.906052" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="0.000243707841" y="4.76878933" width="203.54121" height="40.256917"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="203.54121" height="40.256917" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="0.000243707841" y="2.46839408" width="203.54121" height="40.256917"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="203.54121" height="40.256917" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-7" x="0.000243707841" y="0.167998821" width="203.54121" height="40.256917"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="203.54121" height="40.256917" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <rect id="path-9" x="0" y="1.11867481" width="208" height="279.668703" rx="5"></rect>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="208" height="279.668703" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <path d="M0,1.00282103 C0,0.448978269 0.44437207,0.0223459534 0.999081151,0.0502403782 L21.2469082,1.06843443 C21.7986854,1.09618143 22.2459893,1.57235338 22.2459893,2.11750054 L22.2459893,279.788552 C22.2459893,280.340188 21.8016172,280.787377 21.2469082,280.787377 L0.999081151,280.787377 C0.447303867,280.787377 0,280.331884 0,279.784556 L0,1.00282103 Z" id="path-11"></path>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="22.2459893" height="280.738431" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <g id="Notebook" transform="translate(83.000000, 21.000000)">
+                <use id="BackCover" stroke="#979797" mask="url(#mask-2)" stroke-width="2" fill="#A1D376" xlink:href="#path-1"></use>
+                <g id="Pages" transform="translate(2.780749, 243.673898)" stroke="#979797" stroke-width="2" fill="#FEFEFE">
+                    <use id="Rectangle-3" mask="url(#mask-4)" xlink:href="#path-3"></use>
+                    <use id="Rectangle-3" mask="url(#mask-6)" xlink:href="#path-5"></use>
+                    <use id="Rectangle-3" mask="url(#mask-8)" xlink:href="#path-7"></use>
+                </g>
+                <rect id="Rectangle-4" fill="#3C4F3B" x="0" y="255.619927" width="5.74585635" height="35.2382565" rx="2.87292818"></rect>
+                <use id="front-cover" stroke="#979797" mask="url(#mask-10)" stroke-width="2" fill="#A3EC87" xlink:href="#path-9"></use>
+                <text id="by:-Green-Body-Love" font-family="Bad Script" font-size="12" font-weight="normal" fill="#000000">
+                    <tspan x="94.1436464" y="264.6917">by: Green Body Love</tspan>
+                </text>
+                <text id="My-Food-Journal" fill="#A5688A" font-family="Alfa Slab One" font-size="32" font-weight="normal">
+                    <tspan x="41.3092202" y="82.458498">My Food </tspan>
+                    <tspan x="50.3652202" y="126.458498">Journal</tspan>
+                </text>
+                <use id="Rectangle-2" stroke="#979797" mask="url(#mask-12)" stroke-width="2" fill="#587D56" xlink:href="#path-11"></use>
+            </g>
+        </g>
+    </g>
+</svg>

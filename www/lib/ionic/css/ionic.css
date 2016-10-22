@@ -6357,7 +6357,8 @@ button.item.item-button-right {
 .item-avatar-left.item-complex,
 .item-thumbnail-left.item-complex {
   padding-top: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  }
 
 .item-thumbnail-right,
 .item-thumbnail-right .item-content {
@@ -9088,7 +9089,9 @@ a.button {
   flex: 1;
   display: block;
   padding: 5px;
-  width: 100%; }
+  width: 100%;
+  /* text-align: right; */
+  }
 
 /* Vertically Align Columns */
 /* .row-* vertically aligns every .col in the .row */

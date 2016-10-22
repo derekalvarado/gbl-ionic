@@ -1,9 +1,9 @@
 <ion-view view-title="Summary" class="">
-  <ion-content class="padding homebg" has-bouncing="false">
+	<ion-content class="padding homebg">
 
 
-    <!--picker is going to require a lot more work-->
-    <!--<div class="item item-input item-select">
+		<!--picker is going to require a lot more work-->
+		<!--<div class="item item-input item-select">
       <div class="input-label">Range:</div>
       <select novalidate name="Range" id="" ng-model="vm.range" ng-change="vm.pickerChange()">
         <option value="today" selected>Today</option>
@@ -12,25 +12,33 @@
 
     </div>-->
 
-    <!--<gbl-chart range="vm.rangePicker"></gbl-chart>-->
+		<!--<gbl-chart range="vm.rangePicker"></gbl-chart>-->
 
-    <div class="card">
-      <div class="item item-text-wrap">
-        <h2>Totals for {{vm.range}}:</h2>
-      </div>
-    </div>
+		<div class="card">
+			<div class="item item-text-wrap">
+				<h2>Totals for {{vm.range}}:</h2>
+			</div>
+		</div>
 
-    <ul class="list">
-      <li class="item" ng-repeat="(key, val) in vm.viewModel">
-        <h3>{{val.name}}</h3>
-        <i class="ion-ios-nutrition serving-summary-fill" ng-repeat="i in vm.getNumber(val.servings) track by $index"></i>
-        <i class="ion-ios-nutrition-outline serving-summary" ng-repeat="j in vm.getNumber(val.goalServings - val.servings) track by $index"></i>
-      </li>
+		<ul class="list padding-vertical">
+			<li class="item bottom-padding row" ng-repeat="(key, val) in vm.viewModel">
+				<span class="col col-33">{{val.name}}</span>
+				<span class="row flex-right">
+          <span  ng-hide="val.servings < 1">
+            <img class="category-icon" ng-src="img/{{val.icon}}"  ng-repeat="i in vm.getNumber(val.servings) track by $index">
+          </span>
+          <img class="category-icon" ng-src="img/{{val.iconOutline}}" ng-repeat="j in vm.getNumber(val.goalServings - val.servings) track by $index">
+				</span>
 
-    </ul>
+
+				<!--<i class="ion-ios-nutrition serving-summary-fill" ng-repeat="i in vm.getNumber(val.servings) track by $index"></i>-->
+				<!--<i class="ion-ios-nutrition-outline serving-summary" ng-repeat="j in vm.getNumber(val.goalServings - val.servings) track by $index"></i>-->
+			</li>
+
+		</ul>
 
 
 
 
-  </ion-content>
+	</ion-content>
 </ion-view>
