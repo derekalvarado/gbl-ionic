@@ -1,10 +1,19 @@
 <ion-view view-title="Info" class="homebg">
-  <ion-content >
-    <div class="card">
-      <div class="item item-text-wrap">
-        <p>{{vm.info}}</p>
-      </div>
+	<ion-content>
+		<div class="card">
+			<div class="item item-text-wrap">
+				<p>{{vm.info}}</p>
+			</div>
 
-    </div>
-  </ion-content>
+		</div>
+
+		<div class="card">
+			<div class="list">
+				<a class="item item-icon-left" ng-click="vm.openModal()">
+					<i class="icon ion-compose"></i>Send feedback
+				</a>
+			</div>
+		</div>
+	</ion-content>
+
 </ion-view>

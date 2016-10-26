@@ -1,4 +1,12 @@
 {
   "name": "gbl-ionic",
-  "app_id": ""
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "mailgun",
+      "proxyUrl": "https://api:key-32746a539bb7e8711598b71eecf1ef57@api.mailgun.net/v3/sandbox07bb9fac39fd4e33a5c26bafd9c17180.mailgun.org/messages"
+      
+    } 
+
+  ]
 }
