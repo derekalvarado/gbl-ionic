@@ -54,7 +54,7 @@ namespace app {
             this.modal.hide();
         };
 
-        private validateMailFields() {
+        private validateMailFields(): string {
             if (this.name.length == 0) {
                 return '<p>Mising your full name.</p>'
 
@@ -68,7 +68,7 @@ namespace app {
                 
                 return '<p>Message must be at least 10 characters long.</p>';
             }
-            return false;
+            return '';
 
         }
         public sendEmail() {
