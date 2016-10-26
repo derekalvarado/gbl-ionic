@@ -20,6 +20,7 @@ namespace app {
     export class ApiKeyService {
         public getMgAuth(): string {
             return 'Basic <base64 encoded user:password for mailgun>'
+            //e.g. return 'Basic YmtleS0zDJHjhdDJjNmE1MzliYjdlODcxMTU5OGI3MWVxZWY1Nw=='
         }
     }
 
